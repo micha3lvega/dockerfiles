@@ -35,4 +35,4 @@ EXPOSE 8888
 COPY --from=builder /tmp/target/config-server-1.0.0-SNAPSHOT.jar ./config-server.jar
 
 # Arrancar el proyecto
-CMD ["sh", "-c", "java ${JAVA_OPTS} -jar /config-server.jar"]
+CMD ["sh", "-c", "java ${JAVA_OPTS} -jar config-server.jar"]

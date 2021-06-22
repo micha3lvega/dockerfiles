@@ -35,4 +35,4 @@ EXPOSE 8761
 COPY --from=builder /tmp/target/eureka-server-1.0.0-SNAPSHOT.jar ./eureka-server.jar
 
 # Arrancar el proyecto
-CMD ["sh", "-c", "java ${JAVA_OPTS} -jar /eureka-server.jar"]
+CMD ["sh", "-c", "java ${JAVA_OPTS} -jar eureka-server.jar"]
