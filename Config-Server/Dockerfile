@@ -32,7 +32,7 @@ WORKDIR /opt
 EXPOSE 8888
 
 # Copiar de la anterior imagen a esta
-COPY --from=builder /tmp/target/config-server-1.0.0-SNAPSHOT.jar ./config-server-1.0.0-SNAPSHOT.jar
+COPY --from=builder /tmp/target/config-server-1.0.0-SNAPSHOT.jar ./config-server.jar
 
 # Arrancar el proyecto
-CMD java -jar config-server-1.0.0-SNAPSHOT.jar
+CMD ["sh", "-c", "java ${JAVA_OPTS} -jar /config-server.jar"]
